@@ -2,4 +2,4 @@
 
 (defpackage #:clordecone
   (:use #:common-lisp)
-  (:export))
+  (:export #:debugger))
