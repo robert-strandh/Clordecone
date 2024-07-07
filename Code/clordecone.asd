@@ -12,4 +12,6 @@
    (:file "command-report")
    (:file "command-condition")
    (:file "command-restarts")
+   (:file "command-restart")
+   (:file "debugger-invoke-restart")
    (:file "debugger")))
