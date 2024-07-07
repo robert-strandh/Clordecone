@@ -14,4 +14,7 @@
    (:file "command-restarts")
    (:file "command-restart")
    (:file "debugger-invoke-restart")
+   (:file "command-abort-and-q")
+   (:file "command-continue-and-c")
+   (:file "command-help")
    (:file "debugger")))
