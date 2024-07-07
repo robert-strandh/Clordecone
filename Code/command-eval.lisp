@@ -1,0 +1,10 @@
+(cl:in-package #:clordecone)
+
+(define-command :eval (stream condition &optional form)
+  (let ((level *debug-level*))
+    (with-simple-restart (abort "Return to debugger level ~D." level)
+      (let* ((real-form (or form (read stream)))
+             (- real-form)
+             (values (multiple-value-list (eval real-form))))
+        (format stream "~&~{~S~^~%~}" values)
+        (values values real-form)))))
