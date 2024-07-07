@@ -14,8 +14,7 @@
         (shiftf *** ** * (first values))
         (shiftf +++ ++ + actual-thing)))))
 
-(defun standard-debugger (condition &optional (stream *debug-io*))
-  "Implements the standard debugger."
+(defun debugger (condition &optional (stream *debug-io*))
   (let ((*debug-level* (1+ *debug-level*)))
     (run-debugger-command :report stream condition)
     (format stream "~&;; Type :HELP for available commands.~%")
